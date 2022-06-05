@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css.css" />
+    <script src="js.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="container d-flex mt-4">
+        <img src="./asset/back.png" class="" />
+        <img src="./asset/logo.png" alt="" />
+        <h1>ROCK PAPER SCISSORS</h1>
+      </div>
+    </header>
+
+    <div id="game" class="pt-5">
+      <div id="player" class="align-content-center">
+        <h1>player 1</h1>
+        <img id="batu" src="./asset/batu.png" />
+        <img id="kertas" src="./asset/kertas.png" />
+        <img id="gunting" src="./asset/gunting.png" />
+      </div>
+      <div id="vs">
+        <h1>VS</h1>
+        <div id="result">
+          <p></p>
+        </div>
+      </div>
+      <div id="computer" class="align-content-center">
+        <h1>com</h1>
+        <img src="./asset/batu.png" />
+        <img src="./asset/kertas.png" />
+        <img src="./asset/gunting.png" />
+      </div>
+    </div>
+
+    <script>
+      // var reset = document.getElementById("reset");
+      let batu = document.getElementById("batu");
+      // var gunting = document.getElementById("gunting");
+      // var kertas = document.getElementById("kertas");
+      // console.log(batu);
+      // var pilihan = "";
+      batu.onclick = function () {
+        batu.innerHTML += "<style>#batu{background-color : white;}</style>";
+        let gameSuit = new GameSuit();
+        let player = "batu";
+        let com = gameSuit.comSelect();
+        console.log(com);
+        let hasil = gameSuit.rules(com, player);
+        console.log(hasil);
+      };
+      // gunting.addEventListener("click", function () {
+      //   batu.innerHTML += "<style>#gunting{background-color : white;}</style>";
+      //   pilihan = "gunting";
+      // });
+      // kertas.addEventListener("click", function () {
+      //   batu.innerHTML += "<style>#kertas{background-color : white;}</style>";
+      //   pilihan = "kertas";
+      // });
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
