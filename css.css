@@ -74,3 +74,10 @@ header img {
   text-align: center;
   text-transform: uppercase;
 }
+
+#reset {
+  position: absolute;
+  top: 80%;
+  left: 47%;
+  width: 6vw;
+}
